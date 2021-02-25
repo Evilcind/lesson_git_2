@@ -13,8 +13,6 @@ class Example(QWidget):
         self.setGeometry(300, 300, 200, 200)
         self.setWindowTitle('Git2')
         uic.loadUi('UI.ui', self)
-        self.pushButton = QPushButton(self)
-        self.pushButton.move(self.width() // 2, self.height() // 2)
         self.pushButton.clicked.connect(self.draw_bol)
         self.flag = False
         self.show()
