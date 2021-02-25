@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QWidget, QApplication, QPushButton
 from PyQt5.QtGui import QPainter, QColor
+from PyQt5 import uic
 from random import randint
 
 class Example(QWidget):
@@ -11,6 +12,7 @@ class Example(QWidget):
     def initUI(self):
         self.setGeometry(300, 300, 200, 200)
         self.setWindowTitle('Git2')
+        uic.loadUi('UI.ui', self)
         self.pushButton = QPushButton(self)
         self.pushButton.move(self.width() // 2, self.height() // 2)
         self.pushButton.clicked.connect(self.draw_bol)
